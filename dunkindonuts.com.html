@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunkin' - America's Favorite Coffee, Espresso and Donuts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<Style>
+    /* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Button Styles */
+.btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #f47ba1;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #ea4c7b;
+}
+
+.btn-secondary {
+    background-color: #ff7a16;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #e56b0e;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #f47ba1;
+    border: 1px solid #f47ba1;
+}
+
+.btn-outline:hover {
+    background-color: #fce7ee;
+}
+
+.btn-large {
+    padding: 12px 30px;
+    font-size: 16px;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 100;
+}
+
+/* Top Navigation */
+.top-nav {
+    padding: 10px 0;
+}
+
+.top-nav-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.top-nav-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #777;
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Menu Dropdown */
+.nav-dropdown {
+    position: static;
+}
+
+.menu-dropdown {
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.menu-category h4 {
+    color: #f47ba1;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.menu-category ul li {
+    margin-bottom: 10px;
+}
+
+.menu-category ul li a {
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.menu-category ul li a:hover {
+    color: #f47ba1;
+}
+
+/* Main Navigation */
+.main-nav {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.main-nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #aaa;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-link:hover {
+    color: #f47ba1;
+}
+
+.order-btn-nav {
+    color: #ff7a16;
+}
+
+.order-btn-nav:hover {
+    color: #e56b0e;
+}
+
+.logo {
+    width: 120px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+/* Cart Icon */
+.cart-icon {
+    position: relative;
+    font-size: 18px;
+    color: #f47ba1;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff7a16;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile Menu */
+.mobile-menu-toggle {
+    display: none;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #777;
+}
+
+.mobile-menu {
+    display: none;
+    background-color: white;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+}
+
+.mobile-nav-link {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    color: #777;
+}
+
+.mobile-menu-item {
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-submenu-toggle {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #777;
+    cursor: pointer;
+    padding: 12px;
+}
+
+.mobile-submenu {
+    display: none;
+    padding-left: 20px;
+}
+
+.mobile-submenu-link {
+    display: block;
+    padding: 10px 0;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Banner */
+.banner {
+    background-color: #fbd0de;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.banner p {
+    color: #333;
+}
+
+.banner a {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #fff8ed, #fdf2f6);
+    padding: 60px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-left, .hero-right {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-center {
+    flex: 2;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    color: #f47ba1;
+    font-size: 42px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.registered {
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    margin-left: 2px;
+}
+
+.hero h2 {
+    color: #ccc;
+    font-size: 42px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Sprinkles Animation */
+.sprinkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.sprinkle {
+    position: absolute;
+    width: 15px;
+    height: 4px;
+    border-radius: 3px;
+    opacity: 0.7;
+    animation: float 5s ease-in-out infinite;
+}
+
+.sprinkle-1 {
+    top: 20%;
+    left: 30%;
+    background-color: #f47ba1;
+    transform: rotate(30deg);
+    animation-delay: 0s;
+}
+
+.sprinkle-2 {
+    top: 40%;
+    left: 60%;
+    background-color: #6bb8ff;
+    transform: rotate(45deg);
+    animation-delay: 1s;
+}
+
+.sprinkle-3 {
+    top: 60%;
+    left: 40%;
+    background-color: #ffcf6b;
+    transform: rotate(-30deg);
+    animation-delay: 2s;
+}
+
+.sprinkle-4 {
+    top: 30%;
+    left: 70%;
+    background-color: #6bffb8;
+    transform: rotate(60deg);
+    animation-delay: 1.5s;
+}
+
+.sprinkle-5 {
+    top: 70%;
+    left: 20%;
+    background-color: #ff6b6b;
+    transform: rotate(-45deg);
+    animation-delay: 0.5s;
+}
+
+.sprinkle-6 {
+    top: 50%;
+    left: 50%;
+    background-color: #d46bff;
+    transform: rotate(15deg);
+    animation-delay: 2.5s;
+}
+
+.sprinkle-7 {
+    top: 25%;
+    left: 45%;
+    background-color: #6bffb8;
+    transform: rotate(-15deg);
+    animation-delay: 3s;
+}
+
+.sprinkle-8 {
+    top: 65%;
+    left: 35%;
+    background-color: #ffcf6b;
+    transform: rotate(75deg);
+    animation-delay: 1.2s;
+}
+
+.sprinkle-9 {
+    top: 15%;
+    left: 55%;
+    background-color: #f47ba1;
+    transform: rotate(-60deg);
+    animation-delay: 0.8s;
+}
+
+.sprinkle-10 {
+    top: 55%;
+    left: 65%;
+    background-color: #6bb8ff;
+    transform: rotate(30deg);
+    animation-delay: 2.2s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(var(--rotation, 0deg));
+    }
+    50% {
+        transform: translateY(-15px) rotate(var(--rotation, 0deg));
+    }
+}
+
+/* Features Section */
+.features {
+    padding: 80px 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+}
+
+.feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.feature h3 {
+    color: #ccc;
+    font-size: 24px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.feature p {
+    color: #666;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Menu Showcase Section */
+.menu-showcase {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.menu-showcase h2 {
+    text-align: center;
+    color: #f47ba1;
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 800;
+}
+
+.menu-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.menu-category-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-category-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-category-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-category-card h3 {
+    color: #666;
+    font-size: 20px;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.menu-category-card .btn {
+    margin-bottom: 20px;
+}
+
+/* Order Modal */
+.order-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    display: none;
+    overflow-y: auto;
+}
+
+.order-modal-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.order-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.order-modal-header h2 {
+    color: #f47ba1;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.order-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.order-tab {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: #aaa;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.order-tab.active {
+    color: #f47ba1;
+    border-bottom-color: #f47ba1;
+}
+
+.order-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-details {
+    padding: 15px;
+}
+
+.product-name {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.product-description {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.product-price {
+    font-weight: 700;
+    color: #f47ba1;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+}
+
+/* Cart Sidebar */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-header h3 {
+    color: #f47ba1;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.empty-cart-message {
+    text-align: center;
+    color: #aaa;
+    padding: 40px 0;
+}
+
+.cart-item {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.cart-item-price {
+    color: #f47ba1;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-btn {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.quantity-value {
+    font-weight: 700;
+}
+
+.cart-item-remove {
+    color: #aaa;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.cart-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.checkout-btn {
+    width: 100%;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-column h4 {
+    color: #f47ba1;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    transition: color 0.3s ease;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #f47ba1;
+}
+
+.app-download p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.app-button {
+    width: 120px;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-legal a {
+    color: #ccc;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: white;
+}
+
+.footer-copyright {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Custom Image Styles */
+#dunkin-logo, #footer-logo {
+    width: 120px;
+    height: auto;
+}
+
+#donut-image, #beverage-image {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+#mobile-icon, #rewards-icon, #boost-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+#coffee-image {
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="%23fff8ed"/><circle cx="100" cy="100" r="50" fill="%23ff7a16" opacity="0.3"/><path d="M70,70 L130,70 L120,150 L80,150 Z" fill="%23ff7a16" opacity="0.5"/><text x="100" y="100" font-family="Arial" font-size="20" text-anchor="middle" fill="%23333">Coffee</text></svg>');
+}
+
+#donuts-image {
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="%23fce7ee"/><circle cx="100" cy="100" r="60" fill="%23f47ba1" opacity="0.3"/><circle cx="100" cy="100" r="30" fill="white"/><text x="100" y="100" font-family="Arial" font-size="20" text-anchor="middle" fill="%23333">Donuts</text></svg>');
+}
+
+#sandwiches-image {
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="%23f9f9f9"/><path d="M40,70 L160,70 L160,130 L40,130 Z" fill="%23ffcf6b" opacity="0.5"/><path d="M40,80 L160,80 L160,120 L40,120 Z" fill="%23ff7a16" opacity="0.3"/><text x="100" y="105" font-family="Arial" font-size="20" text-anchor="middle" fill="%23333">Sandwiches</text></svg>');
+}
+
+#app-store, #google-play {
+    width: 120px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .nav-right, .nav-left {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .main-nav-content {
+        justify-content: space-between;
+    }
+    
+    .logo {
+        margin: 0 auto;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .hero-left, .hero-center, .hero-right {
+        margin-bottom: 30px;
+    }
+    
+    .features-grid, .menu-categories {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-column {
+        flex: 0 0 50%;
+    }
+    
+    .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-nav-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero h1, .hero h2 {
+        font-size: 32px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-logo {
+        margin-bottom: 30px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .order-tabs {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .hero h1, .hero h2 {
+        font-size: 28px;
+    }
+    
+    .footer-column {
+        flex: 0 0 100%;
+    }
+    
+    .footer-legal {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+</Style>
+</head>
+<body>
+    <header>
+        <div class="top-nav">
+            <div class="container">
+                <div class="top-nav-content">
+                    <div class="spacer"></div>
+                    <div class="top-nav-buttons">
+                        <div class="dropdown">
+                            <button class="dropdown-btn">Careers <i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <button class="btn btn-outline">JOIN REWARDS</button>
+                        <button class="btn btn-primary">SIGN IN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <div class="main-nav-content">
+                    <div class="nav-left">
+                        <div class="dropdown nav-dropdown">
+                            <a href="#" class="nav-link">MENU <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-content menu-dropdown">
+                                <div class="menu-grid">
+                                    <div class="menu-category">
+                                        <h4>BEVERAGES</h4>
+                                        <ul>
+                                            <li><a href="#">Hot Coffees</a></li>
+                                            <li><a href="#">Iced Coffees</a></li>
+                                            <li><a href="#">Frozen Drinks</a></li>
+                                            <li><a href="#">Cold Brew</a></li>
+                                            <li><a href="#">Teas</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-category">
+                                        <h4>FOOD</h4>
+                                        <ul>
+                                            <li><a href="#">Donuts</a></li>
+                                            <li><a href="#">Bagels</a></li>
+                                            <li><a href="#">Sandwiches</a></li>
+                                            <li><a href="#">Muffins</a></li>
+                                            <li><a href="#">Breakfast</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-category">
+                                        <h4>FEATURED</h4>
+                                        <ul>
+                                            <li><a href="#">Seasonal Offers</a></li>
+                                            <li><a href="#">Dunkin' Deals</a></li>
+                                            <li><a href="#">Limited Time</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="nav-link">LOCATIONS</a>
+                        <a href="#" class="nav-link">DELIVERY</a>
+                        <a href="#" class="nav-link order-btn-nav">ORDER NOW</a>
+                    </div>
+                    
+                    <div class="logo">
+                        <a href="/">
+                            <img src="images/dunkin-logo.png" alt="Dunkin' Logo" id="dunkin-logo">
+                        </a>
+                    </div>
+                    
+                    <div class="nav-right">
+                        <a href="#" class="nav-link">DUNKIN' REWARDS</a>
+                        <a href="#" class="nav-link">DUNKIN' CARD</a>
+                        <a href="#" class="nav-link">SHOP</a>
+                        <a href="#" class="cart-icon" id="cart-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count" id="cart-count">0</span>
+                        </a>
+                    </div>
+                    
+                    <div class="mobile-menu-toggle">
+                        <button id="menu-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="container">
+                <div class="mobile-menu-item">
+                    <div class="mobile-menu-header">
+                        <a href="#" class="mobile-nav-link">MENU</a>
+                        <button class="mobile-submenu-toggle" data-target="menu-submenu">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="mobile-submenu" id="menu-submenu">
+                        <a href="#" class="mobile-submenu-link">Hot Coffees</a>
+                        <a href="#" class="mobile-submenu-link">Iced Coffees</a>
+                        <a href="#" class="mobile-submenu-link">Donuts</a>
+                        <a href="#" class="mobile-submenu-link">Bagels</a>
+                        <a href="#" class="mobile-submenu-link">Sandwiches</a>
+                    </div>
+                </div>
+                <a href="#" class="mobile-nav-link">LOCATIONS</a>
+                <a href="#" class="mobile-nav-link">DELIVERY</a>
+                <a href="#" class="mobile-nav-link">ORDER NOW</a>
+                <a href="#" class="mobile-nav-link">DUNKIN' REWARDS</a>
+                <a href="#" class="mobile-nav-link">DUNKIN' CARD</a>
+                <a href="#" class="mobile-nav-link">SHOP</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="container">
+            <p>Come run with us! Apply to join our exceptional team <a href="#">here</a>.</p>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-left">
+                        <img src="images/donut.png" alt="Sprinkled Donut" id="donut-image">
+                        <div class="sprinkles">
+                            <span class="sprinkle sprinkle-1"></span>
+                            <span class="sprinkle sprinkle-2"></span>
+                            <span class="sprinkle sprinkle-3"></span>
+                            <span class="sprinkle sprinkle-4"></span>
+                            <span class="sprinkle sprinkle-5"></span>
+                            <span class="sprinkle sprinkle-6"></span>
+                            <span class="sprinkle sprinkle-7"></span>
+                            <span class="sprinkle sprinkle-8"></span>
+                            <span class="sprinkle sprinkle-9"></span>
+                            <span class="sprinkle sprinkle-10"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-center">
+                        <h1>DUNKIN' REWARDS<span class="registered">®</span></h1>
+                        <h2>MAKE THE MOST<br>OF YOUR DUNKIN' RUN!</h2>
+                        <p>
+                            Calling all Dunkin' fans! Join Dunkin' Rewards today to enjoy exclusive offers and 
+                            start earning points toward <strong>FREE food and drinks.</strong> The more you visit, the 
+                            more benefits you unlock!
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary btn-large">JOIN NOW</button>
+                            <button class="btn btn-secondary btn-large" id="order-now-btn">ORDER NOW</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-right">
+                        <img src="images/beverage.png" alt="Dunkin' Beverage" id="beverage-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <img src="images/mobile-icon.png" alt="Mobile App Icon" id="mobile-icon">
+                        </div>
+                        <h3>EARN POINTS ANY<br>WAY YOU PAY</h3>
+                        <p>Order ahead in the app or scan your Dunkin' Rewards ID in-store.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <img src="images/rewards-icon.png" alt="Rewards Icon" id="rewards-icon">
+                        </div>
+                        <h3>GET REWARDS AND<br>OFFERS</h3>
+                        <p>Enjoy exclusive offers and redeem points for free food and drinks.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <img src="images/boost-icon.png" alt="Boost Status Icon" id="boost-icon">
+                        </div>
+                        <h3>UNLOCK MORE WITH<br>BOOSTED STATUS</h3>
+                        <p>Earn faster when you visit 12 times in a calendar month and start enjoying Boosted Status benefits.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-showcase">
+            <div class="container">
+                <h2>EXPLORE OUR MENU</h2>
+                <div class="menu-categories">
+                    <div class="menu-category-card">
+                        <div class="menu-category-image" id="coffee-image"></div>
+                        <h3>COFFEE & BEVERAGES</h3>
+                        <a href="#" class="btn btn-outline">VIEW ALL</a>
+                    </div>
+                    <div class="menu-category-card">
+                        <div class="menu-category-image" id="donuts-image"></div>
+                        <h3>DONUTS & TREATS</h3>
+                        <a href="#" class="btn btn-outline">VIEW ALL</a>
+                    </div>
+                    <div class="menu-category-card">
+                        <div class="menu-category-image" id="sandwiches-image"></div>
+                        <h3>SANDWICHES & MORE</h3>
+                        <a href="#" class="btn btn-outline">VIEW ALL</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Order Modal -->
+    <div class="order-modal" id="order-modal">
+        <div class="order-modal-content">
+            <div class="order-modal-header">
+                <h2>ORDER NOW</h2>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            
+            <div class="order-tabs">
+                <button class="order-tab active" data-category="beverages">BEVERAGES</button>
+                <button class="order-tab" data-category="donuts">DONUTS</button>
+                <button class="order-tab" data-category="sandwiches">SANDWICHES</button>
+                <button class="order-tab" data-category="bakery">BAKERY</button>
+            </div>
+            
+            <div class="order-products" id="order-products">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>YOUR ORDER</h3>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be loaded here -->
+            <div class="empty-cart-message" id="empty-cart-message">
+                <p>Your cart is empty</p>
+                <p>Add some delicious items to get started!</p>
+            </div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-amount">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-large checkout-btn" id="checkout-btn">CHECKOUT</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/dunkin-logo.png" alt="Dunkin' Logo" id="footer-logo">
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>ABOUT</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Company Information</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>CUSTOMER SERVICE</h4>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                            <li><a href="#">Nutritional Information</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>BUSINESS</h4>
+                        <ul>
+                            <li><a href="#">Franchising</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Supply Chain</a></li>
+                            <li><a href="#">International</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>CONNECT WITH US</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                        <div class="app-download">
+                            <p>GET THE DUNKIN' APP</p>
+                            <div class="app-buttons">
+                                <a href="#" class="app-button">
+                                    <img src="images/app-store.png" alt="App Store" id="app-store">
+                                </a>
+                                <a href="#" class="app-button">
+                                    <img src="images/google-play.png" alt="Google Play" id="google-play">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Your Privacy Choices</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>© 2023 DD IP Holder LLC</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuToggle.addEventListener('click', function() {
+        if (mobileMenu.style.display === 'block') {
+            mobileMenu.style.display = 'none';
+        } else {
+            mobileMenu.style.display = 'block';
+        }
+    });
+    
+    // Mobile submenu toggles
+    const submenuToggles = document.querySelectorAll('.mobile-submenu-toggle');
+    
+    submenuToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const submenu = document.getElementById(targetId);
+            
+            if (submenu.style.display === 'block') {
+                submenu.style.display = 'none';
+                this.innerHTML = '<i class="fas fa-plus"></i>';
+            } else {
+                submenu.style.display = 'block';
+                this.innerHTML = '<i class="fas fa-minus"></i>';
+            }
+        });
+    });
+    
+    // Close mobile menu on window resize if screen becomes larger
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 992 && mobileMenu.style.display === 'block') {
+            mobileMenu.style.display = 'none';
+        }
+    });
+    
+    // Create SVG images that match the Dunkin' website
+    createDunkinLogo();
+    createDonutImage();
+    createBeverageImage();
+    createMobileIcon();
+    createRewardsIcon();
+    createBoostIcon();
+    createAppStoreImage();
+    createGooglePlayImage();
+    
+    // Add animation to sprinkles
+    animateSprinkles();
+    
+    // Order Modal
+    const orderNowBtn = document.getElementById('order-now-btn');
+    const orderBtnNav = document.querySelector('.order-btn-nav');
+    const orderModal = document.getElementById('order-modal');
+    const closeModal = document.getElementById('close-modal');
+    const overlay = document.getElementById('overlay');
+    
+    // Cart Sidebar
+    const cartIcon = document.getElementById('cart-icon');
+    const cartSidebar = document.getElementById('cart-sidebar');
+    const closeCart = document.getElementById('close-cart');
+    const cartItems = document.getElementById('cart-items');
+    const cartCount = document.getElementById('cart-count');
+    const cartTotalAmount = document.getElementById('cart-total-amount');
+    const emptyCartMessage = document.getElementById('empty-cart-message');
+    const checkoutBtn = document.getElementById('checkout-btn');
+    
+    // Order Tabs
+    const orderTabs = document.querySelectorAll('.order-tab');
+    const orderProducts = document.getElementById('order-products');
+    
+    // Product Data
+    const products = {
+        beverages: [
+            {
+                id: 'b1',
+                name: 'Original Blend Coffee',
+                description: 'Our signature blend, smooth and flavorful.',
+                price: 2.49,
+                image: createProductImage('coffee', '#ff7a16')
+            },
+            {
+                id: 'b2',
+                name: 'Cold Brew',
+                description: 'Slow-steeped, super-smooth cold brew coffee.',
+                price: 3.49,
+                image: createProductImage('cold-brew', '#6bb8ff')
+            },
+            {
+                id: 'b3',
+                name: 'Iced Coffee',
+                description: 'Our famous coffee served cold over ice.',
+                price: 2.99,
+                image: createProductImage('iced-coffee', '#ff7a16')
+            },
+            {
+                id: 'b4',
+                name: 'Frozen Coffee',
+                description: 'Creamy, frozen coffee blended with ice.',
+                price: 3.99,
+                image: createProductImage('frozen-coffee', '#f47ba1')
+            }
+        ],
+        donuts: [
+            {
+                id: 'd1',
+                name: 'Glazed Donut',
+                description: 'Our classic glazed donut, light and fluffy.',
+                price: 1.29,
+                image: createProductImage('glazed-donut', '#f47ba1')
+            },
+            {
+                id: 'd2',
+                name: 'Chocolate Frosted',
+                description: 'Glazed donut topped with chocolate frosting.',
+                price: 1.39,
+                image: createProductImage('chocolate-donut', '#6b4226')
+            },
+            {
+                id: 'd3',
+                name: 'Boston Kreme',
+                description: 'Filled with vanilla custard and topped with chocolate.',
+                price: 1.49,
+                image: createProductImage('boston-kreme', '#6b4226')
+            },
+            {
+                id: 'd4',
+                name: 'Strawberry Frosted',
+                description: 'Glazed donut topped with strawberry frosting and sprinkles.',
+                price: 1.39,
+                image: createProductImage('strawberry-donut', '#f47ba1')
+            }
+        ],
+        sandwiches: [
+            {
+                id: 's1',
+                name: 'Bacon, Egg & Cheese',
+                description: 'Bacon, egg and cheese on your choice of bagel or croissant.',
+                price: 4.29,
+                image: createProductImage('bacon-egg-cheese', '#ffcf6b')
+            },
+            {
+                id: 's2',
+                name: 'Turkey Sausage',
+                description: 'Turkey sausage, egg and cheese on an English muffin.',
+                price: 4.49,
+                image: createProductImage('turkey-sausage', '#ffcf6b')
+            },
+            {
+                id: 's3',
+                name: 'Ham & Cheese',
+                description: 'Ham and cheese on a buttery croissant.',
+                price: 3.99,
+                image: createProductImage('ham-cheese', '#ffcf6b')
+            },
+            {
+                id: 's4',
+                name: 'Veggie Egg White',
+                description: 'Egg white with spinach and cheese on a multigrain thin.',
+                price: 4.19,
+                image: createProductImage('veggie-egg', '#6bffb8')
+            }
+        ],
+        bakery: [
+            {
+                id: 'bk1',
+                name: 'Plain Bagel',
+                description: 'Freshly baked plain bagel.',
+                price: 1.19,
+                image: createProductImage('bagel', '#ffcf6b')
+            },
+            {
+                id: 'bk2',
+                name: 'Blueberry Muffin',
+                description: 'Moist muffin filled with blueberries.',
+                price: 2.29,
+                image: createProductImage('muffin', '#6bb8ff')
+            },
+            {
+                id: 'bk3',
+                name: 'Croissant',
+                description: 'Flaky, buttery croissant.',
+                price: 2.49,
+                image: createProductImage('croissant', '#ffcf6b')
+            },
+            {
+                id: 'bk4',
+                name: 'Coffee Roll',
+                description: 'Sweet roll with cinnamon and coffee flavors.',
+                price: 1.99,
+                image: createProductImage('coffee-roll', '#6b4226')
+            }
+        ]
+    };
+    
+    // Cart Data
+    let cart = [];
+    
+    // Open Order Modal
+    function openOrderModal() {
+        orderModal.style.display = 'block';
+        overlay.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        
+        // Load default category (beverages)
+        loadProducts('beverages');
+    }
+    
+    // Close Order Modal
+    function closeOrderModal() {
+        orderModal.style.display = 'none';
+        overlay.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+    
+    // Open Cart Sidebar
+    function openCartSidebar() {
+        cartSidebar.classList.add('open');
+        overlay.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+    
+    // Close Cart Sidebar
+    function closeCartSidebar() {
+        cartSidebar.classList.remove('open');
+        overlay.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+    
+    // Load Products by Category
+    function loadProducts(category) {
+        orderProducts.innerHTML = '';
+        
+        products[category].forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'product-card';
+            
+            productCard.innerHTML = `
+                <div class="product-image" style="background-image: url('${product.image}')"></div>
+                <div class="product-details">
+                    <h3 class="product-name">${product.name}</h3>
+                    <p class="product-description">${product.description}</p>
+                    <div class="product-price">$${product.price.toFixed(2)}</div>
+                    <button class="btn btn-primary add-to-cart-btn" data-id="${product.id}" data-category="${category}">ADD TO CART</button>
+                </div>
+            `;
+            
+            orderProducts.appendChild(productCard);
+        });
+        
+        // Add event listeners to Add to Cart buttons
+        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const productId = this.getAttribute('data-id');
+                const productCategory = this.getAttribute('data-category');
+                addToCart(productId, productCategory);
+            });
+        });
+    }
+    
+    // Add to Cart
+    function addToCart(productId, category) {
+        const product = products[category].find(p => p.id === productId);
+        
+        // Check if product is already in cart
+        const existingItem = cart.find(item => item.id === productId);
+        
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+                quantity: 1
+            });
+        }
+        
+        updateCart();
+        openCartSidebar();
+    }
+    
+    // Update Cart
+    function updateCart() {
+        // Update cart count
+        const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+        cartCount.textContent = totalItems;
+        
+        // Show/hide empty cart message
+        if (cart.length === 0) {
+            emptyCartMessage.style.display = 'block';
+        } else {
+            emptyCartMessage.style.display = 'none';
+        }
+        
+        // Update cart items
+        cartItems.innerHTML = '';
+        
+        cart.forEach(item => {
+            const cartItem = document.createElement('div');
+            cartItem.className = 'cart-item';
+            
+            cartItem.innerHTML = `
+                <div class="cart-item-image" style="background-image: url('${item.image}')"></div>
+                <div class="cart-item-details">
+                    <div class="cart-item-name">${item.name}</div>
+                    <div class="cart-item-price">$${(item.price * item.quantity).toFixed(2)}</div>
+                    <div class="cart-item-quantity">
+                        <button class="quantity-btn decrease-btn" data-id="${item.id}">-</button>
+                        <span class="quantity-value">${item.quantity}</span>
+                        <button class="quantity-btn increase-btn" data-id="${item.id}">+</button>
+                    </div>
+                    <button class="cart-item-remove" data-id="${item.id}">Remove</button>
+                </div>
+            `;
+            
+            cartItems.appendChild(cartItem);
+        });
+        
+        // Add event listeners to quantity buttons
+        const decreaseButtons = document.querySelectorAll('.decrease-btn');
+        const increaseButtons = document.querySelectorAll('.increase-btn');
+        const removeButtons = document.querySelectorAll('.cart-item-remove');
+        
+        decreaseButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const itemId = this.getAttribute('data-id');
+                decreaseQuantity(itemId);
+            });
+        });
+        
+        increaseButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const itemId = this.getAttribute('data-id');
+                increaseQuantity(itemId);
+            });
+        });
+        
+        removeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const itemId = this.getAttribute('data-id');
+                removeFromCart(itemId);
+            });
+        });
+        
+        // Update cart total
+        const total = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+        cartTotalAmount.textContent = `$${total.toFixed(2)}`;
+    }
+    
+    // Decrease Quantity
+    function decreaseQuantity(itemId) {
+        const item = cart.find(item => item.id === itemId);
+        
+        if (item.quantity > 1) {
+            item.quantity -= 1;
+        } else {
+            removeFromCart(itemId);
+        }
+        
+        updateCart();
+    }
+    
+    // Increase Quantity
+    function increaseQuantity(itemId) {
+        const item = cart.find(item => item.id === itemId);
+        item.quantity += 1;
+        updateCart();
+    }
+    
+    // Remove from Cart
+    function removeFromCart(itemId) {
+        cart = cart.filter(item => item.id !== itemId);
+        updateCart();
+    }
+    
+    // Create Product Image
+    function createProductImage(type, color) {
+        let svgContent = '';
+        
+        switch (type) {
+            case 'coffee':
+                svgContent = `
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                        <rect width="200" height="200" fill="#fff8ed"/>
+                        <path d="M70,70 L130,70 L120,150 L80,150 Z" fill="${color}" opacity="0.5"/>
+                        <path d="M80,70 C80,60 120,60 120,70" fill="none" stroke="${color}" stroke-width="3"/>
+                        <rect x="75" y="70" width="50" height="5" rx="2" fill="${color}"/>
+                    </svg>
+                `;
+                break;
+            case 'cold-brew':
+                svgContent = `
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                        <rect width="200" height="200" fill="#f9f9f9"/>
+                        <path d="M70,50 L130,50 L120,150 L80,150 Z" fill="${color}" opacity="0.3"/>
+                        <rect x="90" y="50" width="20" height="100" fill="white" opacity="0.5"/>
+                        <circle cx="100" cy="70" r="5" fill="white"/>
+                        <circle cx="100" cy="90" r="5" fill="white"/>
+                        <circle cx="100" cy="110" r="5" fill="white"/>
+                        <circle cx="100" cy="130" r="5" fill="white"/>
+                    </svg>
+                `;
+                break;
+            case 'glazed-donut':
+                svgContent = `
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                        <rect width="200" height="200" fill="#fce7ee"/>
+                        <circle cx="100" cy="100" r="60" fill="#ffcf6b" opacity="0.7"/>
+                        <circle cx="100" cy="100" r="30" fill="white"/>
+                    </svg>
+                `;
+                break;
+            case 'chocolate-donut':
+                svgContent = `
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                        <rect width="200" height="200" fill="#f9f9f9"/>
+                        <circle cx="100" cy="100" r="60" fill="#6b4226" opacity="0.7"/>
+                        <circle cx="100" cy="100" r="30" fill="white"/>
+                    </svg>
+                `;
+                break;
+            case 'bacon-egg-cheese':
+                svgContent = `
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                        <rect width="200" height="200" fill="#f9f9f9"/>
+                        <path d="M40,70 L160,70 L160,130 L40,130 Z" fill="#ffcf6b" opacity="0.7"/>
+                        <path d="M50,80 L150,80 L150,120 L50,120 Z" fill="#ff7a16" opacity="0.3"/>
+                        <circle cx="100" cy="100" r="20" fill="#fff8ed"/>
+                    </svg>
+                `;
+                break;
+            default:
+                svgContent = `
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                        <rect width="200" height="200" fill="#f9f9f9"/>
+                        <circle cx="100" cy="100" r="50" fill="${color}" opacity="0.3"/>
+                        <text x="100" y="105" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">${type}</text>
+                    </svg>
+                `;
+        }
+        
+        return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgContent);
+    }
+    
+    // Event Listeners
+    orderNowBtn.addEventListener('click', openOrderModal);
+    orderBtnNav.addEventListener('click', openOrderModal);
+    closeModal.addEventListener('click', closeOrderModal);
+    
+    cartIcon.addEventListener('click', openCartSidebar);
+    closeCart.addEventListener('click', closeCartSidebar);
+    
+    overlay.addEventListener('click', function() {
+        closeOrderModal();
+        closeCartSidebar();
+    });
+    
+    // Tab switching
+    orderTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            // Remove active class from all tabs
+            orderTabs.forEach(t => t.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Load products for selected category
+            const category = this.getAttribute('data-category');
+            loadProducts(category);
+        });
+    });
+    
+    // Checkout button
+    checkoutBtn.addEventListener('click', function() {
+        if (cart.length > 0) {
+            alert('Thank you for your order! Your Dunkin\' treats will be ready soon.');
+            cart = [];
+            updateCart();
+            closeCartSidebar();
+        }
+    });
+});
+
+// Function to create the Dunkin' logo
+function createDunkinLogo() {
+    const logoElements = document.querySelectorAll('#dunkin-logo, #footer-logo');
+    logoElements.forEach(logoElement => {
+        if (logoElement) {
+            logoElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80">
+                    <text x="10" y="50" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="${logoElement.id === 'footer-logo' ? '#ffffff' : '#ff7a16'}">DUNKIN'</text>
+                </svg>
+            `);
+        }
+    });
+}
+
+// Function to create the donut image
+function createDonutImage() {
+    const donutElement = document.getElementById('donut-image');
+    if (donutElement) {
+        donutElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                <circle cx="150" cy="150" r="100" fill="#fce7ee" stroke="#f47ba1" stroke-width="5"/>
+                <circle cx="150" cy="150" r="40" fill="white"/>
+                <!-- Sprinkles -->
+                <rect x="120" y="80" width="15" height="5" rx="2" fill="#f47ba1" transform="rotate(30 120 80)"/>
+                <rect x="180" y="90" width="15" height="5" rx="2" fill="#6bb8ff" transform="rotate(45 180 90)"/>
+                <rect x="190" y="150" width="15" height="5" rx="2" fill="#ffcf6b" transform="rotate(60 190 150)"/>
+                <rect x="170" y="200" width="15" height="5" rx="2" fill="#6bffb8" transform="rotate(75 170 200)"/>
+                <rect x="110" y="210" width="15" height="5" rx="2" fill="#ff6b6b" transform="rotate(90 110 210)"/>
+                <rect x="80" y="170" width="15" height="5" rx="2" fill="#d46bff" transform="rotate(105 80 170)"/>
+                <rect x="70" y="120" width="15" height="5" rx="2" fill="#6bffb8" transform="rotate(120 70 120)"/>
+                <rect x="90" y="90" width="15" height="5" rx="2" fill="#ffcf6b" transform="rotate(135 90 90)"/>
+                <rect x="140" y="70" width="15" height="5" rx="2" fill="#f47ba1" transform="rotate(150 140 70)"/>
+                <rect x="160" y="220" width="15" height="5" rx="2" fill="#6bb8ff" transform="rotate(165 160 220)"/>
+            </svg>
+        `);
+    }
+}
+
+// Function to create the beverage image
+function createBeverageImage() {
+    const beverageElement = document.getElementById('beverage-image');
+    if (beverageElement) {
+        beverageElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                <path d="M120,50 L180,50 L190,250 L110,250 Z" fill="#fff8ed" stroke="#ff7a16" stroke-width="3"/>
+                <path d="M120,50 L180,50 L175,100 L125,100 Z" fill="#ff7a16" opacity="0.3"/>
+                <path d="M125,100 L175,100 L170,200 L130,200 Z" fill="#ff7a16" opacity="0.2"/>
+                <rect x="110" y="40" width="80" height="10" rx="5" fill="#ff7a16"/>
+                <path d="M140,40 C140,20 160,20 160,40" fill="none" stroke="#ff7a16" stroke-width="3"/>
+                <!-- Straw -->
+                <rect x="145" y="20" width="10" height="80" rx="5" fill="#f47ba1"/>
+            </svg>
+        `);
+    }
+}
+
+// Function to create the mobile icon
+function createMobileIcon() {
+    const mobileElement = document.getElementById('mobile-icon');
+    if (mobileElement) {
+        mobileElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <rect x="30" y="10" width="40" height="80" rx="5" fill="#fce7ee" stroke="#f47ba1" stroke-width="2"/>
+                <rect x="35" y="20" width="30" height="50" rx="2" fill="white"/>
+                <circle cx="50" cy="80" r="5" fill="white"/>
+                <text x="45" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f47ba1">D</text>
+                <!-- Card -->
+                <rect x="60" y="40" width="30" height="20" rx="2" fill="#fce7ee" stroke="#f47ba1" stroke-width="2" transform="rotate(10 60 40)"/>
+            </svg>
+        `);
+    }
+}
+
+// Function to create the rewards icon
+function createRewardsIcon() {
+    const rewardsElement = document.getElementById('rewards-icon');
+    if (rewardsElement) {
+        rewardsElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="#fce7ee" stroke="#f47ba1" stroke-width="2"/>
+                <circle cx="50" cy="50" r="15" fill="white" stroke="#f47ba1" stroke-width="2"/>
+                <text x="45" y="55" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#f47ba1">D</text>
+                <!-- Donut shape -->
+                <path d="M80,30 A40,40 0 0,0 20,70" fill="none" stroke="#ff7a16" stroke-width="4" stroke-dasharray="5,5"/>
+                <!-- Croissant shape -->
+                <path d="M70,80 A40,40 0 0,0 30,20" fill="none" stroke="#ff7a16" stroke-width="4" stroke-dasharray="5,5"/>
+            </svg>
+        `);
+    }
+}
+
+// Function to create the boost icon
+function createBoostIcon() {
+    const boostElement = document.getElementById('boost-icon');
+    if (boostElement) {
+        boostElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M50,10 L60,40 L90,40 L65,60 L75,90 L50,70 L25,90 L35,60 L10,40 L40,40 Z" fill="#fce7ee" stroke="#f47ba1" stroke-width="2"/>
+                <circle cx="50" cy="50" r="10" fill="white" stroke="#f47ba1" stroke-width="2"/>
+                <text x="45" y="55" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f47ba1">D</text>
+            </svg>
+        `);
+    }
+}
+
+// Function to create App Store image
+function createAppStoreImage() {
+    const appStoreElement = document.getElementById('app-store');
+    if (appStoreElement) {
+        appStoreElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
+                <rect width="120" height="40" rx="5" fill="#333"/>
+                <text x="60" y="15" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="white">Download on the</text>
+                <text x="60" y="30" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">App Store</text>
+            </svg>
+        `);
+    }
+}
+
+// Function to create Google Play image
+function createGooglePlayImage() {
+    const googlePlayElement = document.getElementById('google-play');
+    if (googlePlayElement) {
+        googlePlayElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
+                <rect width="120" height="40" rx="5" fill="#333"/>
+                <text x="60" y="15" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="white">GET IT ON</text>
+                <text x="60" y="30" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">Google Play</text>
+            </svg>
+        `);
+    }
+}
+
+// Function to animate sprinkles
+function animateSprinkles() {
+    const sprinkles = document.querySelectorAll('.sprinkle');
+    
+    sprinkles.forEach((sprinkle, index) => {
+        // Set custom rotation for each sprinkle
+        const rotation = Math.random() * 90 - 45; // Random rotation between -45 and 45 degrees
+        sprinkle.style.setProperty('--rotation', `${rotation}deg`);
+        
+        // Set random position
+        const top = 20 + Math.random() * 60; // Random top position between 20% and 80%
+        const left = 20 + Math.random() * 60; // Random left position between 20% and 80%
+        
+        sprinkle.style.top = `${top}%`;
+        sprinkle.style.left = `${left}%`;
+    });
+}
+    </script>
+</body>
+</html>
