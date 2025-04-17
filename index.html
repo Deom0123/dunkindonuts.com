@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<Style>
+<style>
     /* Reset and Base Styles */
 * {
     margin: 0;
@@ -19,7 +19,6 @@ body {
     font-family: 'Montserrat', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    overflow-x: hidden;
 }
 
 .container {
@@ -64,15 +63,6 @@ ul {
 
 .btn-primary:hover {
     background-color: #ea4c7b;
-}
-
-.btn-secondary {
-    background-color: #ff7a16;
-    color: white;
-}
-
-.btn-secondary:hover {
-    background-color: #e56b0e;
 }
 
 .btn-outline {
@@ -198,7 +188,6 @@ header {
 .nav-left, .nav-right {
     display: flex;
     gap: 30px;
-    align-items: center;
 }
 
 .nav-link {
@@ -216,44 +205,12 @@ header {
     color: #f47ba1;
 }
 
-.order-btn-nav {
-    color: #ff7a16;
-}
-
-.order-btn-nav:hover {
-    color: #e56b0e;
-}
-
 .logo {
     width: 120px;
 }
 
 .logo img {
     width: 100%;
-}
-
-/* Cart Icon */
-.cart-icon {
-    position: relative;
-    font-size: 18px;
-    color: #f47ba1;
-    cursor: pointer;
-}
-
-.cart-count {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: #ff7a16;
-    color: white;
-    font-size: 10px;
-    font-weight: bold;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Mobile Menu */
@@ -389,12 +346,6 @@ header {
     margin-left: auto;
     margin-right: auto;
     font-size: 16px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
 }
 
 /* Sprinkles Animation */
@@ -597,272 +548,6 @@ header {
     margin-bottom: 20px;
 }
 
-/* Order Modal */
-.order-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    z-index: 1000;
-    display: none;
-    overflow-y: auto;
-}
-
-.order-modal-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.order-modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 20px;
-}
-
-.order-modal-header h2 {
-    color: #f47ba1;
-    font-size: 28px;
-    font-weight: 800;
-}
-
-.close-modal {
-    background: none;
-    border: none;
-    font-size: 32px;
-    cursor: pointer;
-    color: #aaa;
-}
-
-.order-tabs {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-}
-
-.order-tab {
-    background: none;
-    border: none;
-    padding: 10px 20px;
-    font-weight: 700;
-    color: #aaa;
-    cursor: pointer;
-    border-bottom: 3px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.order-tab.active {
-    color: #f47ba1;
-    border-bottom-color: #f47ba1;
-}
-
-.order-products {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.product-card {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-}
-
-.product-image {
-    height: 180px;
-    background-size: cover;
-    background-position: center;
-}
-
-.product-details {
-    padding: 15px;
-}
-
-.product-name {
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.product-description {
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 15px;
-    height: 60px;
-    overflow: hidden;
-}
-
-.product-price {
-    font-weight: 700;
-    color: #f47ba1;
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.add-to-cart-btn {
-    width: 100%;
-}
-
-/* Cart Sidebar */
-.cart-sidebar {
-    position: fixed;
-    top: 0;
-    right: -400px;
-    width: 400px;
-    height: 100%;
-    background-color: white;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    transition: right 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.cart-sidebar.open {
-    right: 0;
-}
-
-.cart-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #eee;
-}
-
-.cart-header h3 {
-    color: #f47ba1;
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.close-cart {
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: #aaa;
-}
-
-.cart-items {
-    flex: 1;
-    overflow-y: auto;
-    padding: 20px;
-}
-
-.empty-cart-message {
-    text-align: center;
-    color: #aaa;
-    padding: 40px 0;
-}
-
-.cart-item {
-    display: flex;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
-}
-
-.cart-item-image {
-    width: 80px;
-    height: 80px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px;
-    margin-right: 15px;
-}
-
-.cart-item-details {
-    flex: 1;
-}
-
-.cart-item-name {
-    font-weight: 700;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.cart-item-price {
-    color: #f47ba1;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.cart-item-quantity {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.quantity-btn {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border: 1px solid #ddd;
-    background: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
-
-.quantity-value {
-    font-weight: 700;
-}
-
-.cart-item-remove {
-    color: #aaa;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-.cart-footer {
-    padding: 20px;
-    border-top: 1px solid #eee;
-}
-
-.cart-total {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.checkout-btn {
-    width: 100%;
-}
-
-/* Overlay */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    display: none;
-}
-
 /* Footer */
 footer {
     background-color: #333;
@@ -1049,11 +734,6 @@ footer {
     .footer-column {
         flex: 0 0 50%;
     }
-    
-    .cart-sidebar {
-        width: 100%;
-        right: -100%;
-    }
 }
 
 @media (max-width: 768px) {
@@ -1077,14 +757,6 @@ footer {
     .footer-bottom {
         flex-direction: column;
         gap: 20px;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-    }
-    
-    .order-tabs {
-        flex-wrap: wrap;
     }
 }
 
@@ -1111,7 +783,7 @@ footer {
         gap: 10px;
     }
 }
-</Style>
+</style>
 </head>
 <body>
     <header>
@@ -1171,11 +843,11 @@ footer {
                         </div>
                         <a href="#" class="nav-link">LOCATIONS</a>
                         <a href="#" class="nav-link">DELIVERY</a>
-                        <a href="www.google.com" class="nav-link order-btn-nav">ORDER NOW</a>
+                        <a href="#" class="nav-link">ORDER NOW</a>
                     </div>
                     
                     <div class="logo">
-                        <a href="/">
+                        <a href="https://www.google.com/">
                             <img src="images/dunkin-logo.png" alt="Dunkin' Logo" id="dunkin-logo">
                         </a>
                     </div>
@@ -1184,10 +856,6 @@ footer {
                         <a href="#" class="nav-link">DUNKIN' REWARDS</a>
                         <a href="#" class="nav-link">DUNKIN' CARD</a>
                         <a href="#" class="nav-link">SHOP</a>
-                        <a href="#" class="cart-icon" id="cart-icon">
-                            <i class="fas fa-shopping-bag"></i>
-                            <span class="cart-count" id="cart-count">0</span>
-                        </a>
                     </div>
                     
                     <div class="mobile-menu-toggle">
@@ -1218,7 +886,7 @@ footer {
                 </div>
                 <a href="#" class="mobile-nav-link">LOCATIONS</a>
                 <a href="#" class="mobile-nav-link">DELIVERY</a>
-                <a href="www.google.com" class="mobile-nav-link">ORDER NOW</a>
+                <a href="#" class="mobile-nav-link">ORDER NOW</a>
                 <a href="#" class="mobile-nav-link">DUNKIN' REWARDS</a>
                 <a href="#" class="mobile-nav-link">DUNKIN' CARD</a>
                 <a href="#" class="mobile-nav-link">SHOP</a>
@@ -1260,10 +928,8 @@ footer {
                             start earning points toward <strong>FREE food and drinks.</strong> The more you visit, the 
                             more benefits you unlock!
                         </p>
-                        <div class="hero-buttons">
-                            <button class="btn btn-primary btn-large">JOIN NOW</button>
-                            <button class="btn btn-secondary btn-large" id="order-now-btn">ORDER NOW</button>
-                        </div>
+                        <button class="btn btn-primary btn-large">JOIN NOW</button>
+                        <button class="btn btn-primary btn-large">ORDER NOW</button>
                     </div>
                     
                     <div class="hero-right">
@@ -1326,54 +992,6 @@ footer {
             </div>
         </section>
     </main>
-
-    <!-- Order Modal -->
-    <div class="order-modal" id="order-modal">
-        <div class="order-modal-content">
-            <div class="order-modal-header">
-                <h2>ORDER NOW</h2>
-                <button class="close-modal" id="close-modal">&times;</button>
-            </div>
-            
-            <div class="order-tabs">
-                <button class="order-tab active" data-category="beverages">BEVERAGES</button>
-                <button class="order-tab" data-category="donuts">DONUTS</button>
-                <button class="order-tab" data-category="sandwiches">SANDWICHES</button>
-                <button class="order-tab" data-category="bakery">BAKERY</button>
-            </div>
-            
-            <div class="order-products" id="order-products">
-                <!-- Products will be loaded here -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Shopping Cart Sidebar -->
-    <div class="cart-sidebar" id="cart-sidebar">
-        <div class="cart-header">
-            <h3>YOUR ORDER</h3>
-            <button class="close-cart" id="close-cart">&times;</button>
-        </div>
-        
-        <div class="cart-items" id="cart-items">
-            <!-- Cart items will be loaded here -->
-            <div class="empty-cart-message" id="empty-cart-message">
-                <p>Your cart is empty</p>
-                <p>Add some delicious items to get started!</p>
-            </div>
-        </div>
-        
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total:</span>
-                <span id="cart-total-amount">$0.00</span>
-            </div>
-            <button class="btn btn-primary btn-large checkout-btn" id="checkout-btn">CHECKOUT</button>
-        </div>
-    </div>
-
-    <!-- Overlay -->
-    <div class="overlay" id="overlay"></div>
 
     <footer>
         <div class="container">
@@ -1451,644 +1069,208 @@ footer {
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    menuToggle.addEventListener('click', function() {
-        if (mobileMenu.style.display === 'block') {
-            mobileMenu.style.display = 'none';
-        } else {
-            mobileMenu.style.display = 'block';
-        }
-    });
-    
-    // Mobile submenu toggles
-    const submenuToggles = document.querySelectorAll('.mobile-submenu-toggle');
-    
-    submenuToggles.forEach(toggle => {
-        toggle.addEventListener('click', function() {
-            const targetId = this.getAttribute('data-target');
-            const submenu = document.getElementById(targetId);
-            
-            if (submenu.style.display === 'block') {
-                submenu.style.display = 'none';
-                this.innerHTML = '<i class="fas fa-plus"></i>';
+    <script>document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', function() {
+            if (mobileMenu.style.display === 'block') {
+                mobileMenu.style.display = 'none';
             } else {
-                submenu.style.display = 'block';
-                this.innerHTML = '<i class="fas fa-minus"></i>';
+                mobileMenu.style.display = 'block';
             }
         });
-    });
-    
-    // Close mobile menu on window resize if screen becomes larger
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 992 && mobileMenu.style.display === 'block') {
-            mobileMenu.style.display = 'none';
-        }
-    });
-    
-    // Create SVG images that match the Dunkin' website
-    createDunkinLogo();
-    createDonutImage();
-    createBeverageImage();
-    createMobileIcon();
-    createRewardsIcon();
-    createBoostIcon();
-    createAppStoreImage();
-    createGooglePlayImage();
-    
-    // Add animation to sprinkles
-    animateSprinkles();
-    
-    // Order Modal
-    const orderNowBtn = document.getElementById('order-now-btn');
-    const orderBtnNav = document.querySelector('.order-btn-nav');
-    const orderModal = document.getElementById('order-modal');
-    const closeModal = document.getElementById('close-modal');
-    const overlay = document.getElementById('overlay');
-    
-    // Cart Sidebar
-    const cartIcon = document.getElementById('cart-icon');
-    const cartSidebar = document.getElementById('cart-sidebar');
-    const closeCart = document.getElementById('close-cart');
-    const cartItems = document.getElementById('cart-items');
-    const cartCount = document.getElementById('cart-count');
-    const cartTotalAmount = document.getElementById('cart-total-amount');
-    const emptyCartMessage = document.getElementById('empty-cart-message');
-    const checkoutBtn = document.getElementById('checkout-btn');
-    
-    // Order Tabs
-    const orderTabs = document.querySelectorAll('.order-tab');
-    const orderProducts = document.getElementById('order-products');
-    
-    // Product Data
-    const products = {
-        beverages: [
-            {
-                id: 'b1',
-                name: 'Original Blend Coffee',
-                description: 'Our signature blend, smooth and flavorful.',
-                price: 2.49,
-                image: createProductImage('coffee', '#ff7a16')
-            },
-            {
-                id: 'b2',
-                name: 'Cold Brew',
-                description: 'Slow-steeped, super-smooth cold brew coffee.',
-                price: 3.49,
-                image: createProductImage('cold-brew', '#6bb8ff')
-            },
-            {
-                id: 'b3',
-                name: 'Iced Coffee',
-                description: 'Our famous coffee served cold over ice.',
-                price: 2.99,
-                image: createProductImage('iced-coffee', '#ff7a16')
-            },
-            {
-                id: 'b4',
-                name: 'Frozen Coffee',
-                description: 'Creamy, frozen coffee blended with ice.',
-                price: 3.99,
-                image: createProductImage('frozen-coffee', '#f47ba1')
-            }
-        ],
-        donuts: [
-            {
-                id: 'd1',
-                name: 'Glazed Donut',
-                description: 'Our classic glazed donut, light and fluffy.',
-                price: 1.29,
-                image: createProductImage('glazed-donut', '#f47ba1')
-            },
-            {
-                id: 'd2',
-                name: 'Chocolate Frosted',
-                description: 'Glazed donut topped with chocolate frosting.',
-                price: 1.39,
-                image: createProductImage('chocolate-donut', '#6b4226')
-            },
-            {
-                id: 'd3',
-                name: 'Boston Kreme',
-                description: 'Filled with vanilla custard and topped with chocolate.',
-                price: 1.49,
-                image: createProductImage('boston-kreme', '#6b4226')
-            },
-            {
-                id: 'd4',
-                name: 'Strawberry Frosted',
-                description: 'Glazed donut topped with strawberry frosting and sprinkles.',
-                price: 1.39,
-                image: createProductImage('strawberry-donut', '#f47ba1')
-            }
-        ],
-        sandwiches: [
-            {
-                id: 's1',
-                name: 'Bacon, Egg & Cheese',
-                description: 'Bacon, egg and cheese on your choice of bagel or croissant.',
-                price: 4.29,
-                image: createProductImage('bacon-egg-cheese', '#ffcf6b')
-            },
-            {
-                id: 's2',
-                name: 'Turkey Sausage',
-                description: 'Turkey sausage, egg and cheese on an English muffin.',
-                price: 4.49,
-                image: createProductImage('turkey-sausage', '#ffcf6b')
-            },
-            {
-                id: 's3',
-                name: 'Ham & Cheese',
-                description: 'Ham and cheese on a buttery croissant.',
-                price: 3.99,
-                image: createProductImage('ham-cheese', '#ffcf6b')
-            },
-            {
-                id: 's4',
-                name: 'Veggie Egg White',
-                description: 'Egg white with spinach and cheese on a multigrain thin.',
-                price: 4.19,
-                image: createProductImage('veggie-egg', '#6bffb8')
-            }
-        ],
-        bakery: [
-            {
-                id: 'bk1',
-                name: 'Plain Bagel',
-                description: 'Freshly baked plain bagel.',
-                price: 1.19,
-                image: createProductImage('bagel', '#ffcf6b')
-            },
-            {
-                id: 'bk2',
-                name: 'Blueberry Muffin',
-                description: 'Moist muffin filled with blueberries.',
-                price: 2.29,
-                image: createProductImage('muffin', '#6bb8ff')
-            },
-            {
-                id: 'bk3',
-                name: 'Croissant',
-                description: 'Flaky, buttery croissant.',
-                price: 2.49,
-                image: createProductImage('croissant', '#ffcf6b')
-            },
-            {
-                id: 'bk4',
-                name: 'Coffee Roll',
-                description: 'Sweet roll with cinnamon and coffee flavors.',
-                price: 1.99,
-                image: createProductImage('coffee-roll', '#6b4226')
-            }
-        ]
-    };
-    
-    // Cart Data
-    let cart = [];
-    
-    // Open Order Modal
-    function openOrderModal() {
-        orderModal.style.display = 'block';
-        overlay.style.display = 'block';
-        document.body.style.overflow = 'hidden';
         
-        // Load default category (beverages)
-        loadProducts('beverages');
-    }
-    
-    // Close Order Modal
-    function closeOrderModal() {
-        orderModal.style.display = 'none';
-        overlay.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-    
-    // Open Cart Sidebar
-    function openCartSidebar() {
-        cartSidebar.classList.add('open');
-        overlay.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    }
-    
-    // Close Cart Sidebar
-    function closeCartSidebar() {
-        cartSidebar.classList.remove('open');
-        overlay.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-    
-    // Load Products by Category
-    function loadProducts(category) {
-        orderProducts.innerHTML = '';
+        // Mobile submenu toggles
+        const submenuToggles = document.querySelectorAll('.mobile-submenu-toggle');
         
-        products[category].forEach(product => {
-            const productCard = document.createElement('div');
-            productCard.className = 'product-card';
-            
-            productCard.innerHTML = `
-                <div class="product-image" style="background-image: url('${product.image}')"></div>
-                <div class="product-details">
-                    <h3 class="product-name">${product.name}</h3>
-                    <p class="product-description">${product.description}</p>
-                    <div class="product-price">$${product.price.toFixed(2)}</div>
-                    <button class="btn btn-primary add-to-cart-btn" data-id="${product.id}" data-category="${category}">ADD TO CART</button>
-                </div>
-            `;
-            
-            orderProducts.appendChild(productCard);
-        });
-        
-        // Add event listeners to Add to Cart buttons
-        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
-        addToCartButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const productId = this.getAttribute('data-id');
-                const productCategory = this.getAttribute('data-category');
-                addToCart(productId, productCategory);
-            });
-        });
-    }
-    
-    // Add to Cart
-    function addToCart(productId, category) {
-        const product = products[category].find(p => p.id === productId);
-        
-        // Check if product is already in cart
-        const existingItem = cart.find(item => item.id === productId);
-        
-        if (existingItem) {
-            existingItem.quantity += 1;
-        } else {
-            cart.push({
-                id: product.id,
-                name: product.name,
-                price: product.price,
-                image: product.image,
-                quantity: 1
-            });
-        }
-        
-        updateCart();
-        openCartSidebar();
-    }
-    
-    // Update Cart
-    function updateCart() {
-        // Update cart count
-        const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-        cartCount.textContent = totalItems;
-        
-        // Show/hide empty cart message
-        if (cart.length === 0) {
-            emptyCartMessage.style.display = 'block';
-        } else {
-            emptyCartMessage.style.display = 'none';
-        }
-        
-        // Update cart items
-        cartItems.innerHTML = '';
-        
-        cart.forEach(item => {
-            const cartItem = document.createElement('div');
-            cartItem.className = 'cart-item';
-            
-            cartItem.innerHTML = `
-                <div class="cart-item-image" style="background-image: url('${item.image}')"></div>
-                <div class="cart-item-details">
-                    <div class="cart-item-name">${item.name}</div>
-                    <div class="cart-item-price">$${(item.price * item.quantity).toFixed(2)}</div>
-                    <div class="cart-item-quantity">
-                        <button class="quantity-btn decrease-btn" data-id="${item.id}">-</button>
-                        <span class="quantity-value">${item.quantity}</span>
-                        <button class="quantity-btn increase-btn" data-id="${item.id}">+</button>
-                    </div>
-                    <button class="cart-item-remove" data-id="${item.id}">Remove</button>
-                </div>
-            `;
-            
-            cartItems.appendChild(cartItem);
-        });
-        
-        // Add event listeners to quantity buttons
-        const decreaseButtons = document.querySelectorAll('.decrease-btn');
-        const increaseButtons = document.querySelectorAll('.increase-btn');
-        const removeButtons = document.querySelectorAll('.cart-item-remove');
-        
-        decreaseButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const itemId = this.getAttribute('data-id');
-                decreaseQuantity(itemId);
+        submenuToggles.forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const submenu = document.getElementById(targetId);
+                
+                if (submenu.style.display === 'block') {
+                    submenu.style.display = 'none';
+                    this.innerHTML = '<i class="fas fa-plus"></i>';
+                } else {
+                    submenu.style.display = 'block';
+                    this.innerHTML = '<i class="fas fa-minus"></i>';
+                }
             });
         });
         
-        increaseButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const itemId = this.getAttribute('data-id');
-                increaseQuantity(itemId);
-            });
+        // Close mobile menu on window resize if screen becomes larger
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 992 && mobileMenu.style.display === 'block') {
+                mobileMenu.style.display = 'none';
+            }
         });
         
-        removeButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const itemId = this.getAttribute('data-id');
-                removeFromCart(itemId);
-            });
+        // Create SVG images that match the Dunkin' website
+        createDunkinLogo();
+        createDonutImage();
+        createBeverageImage();
+        createMobileIcon();
+        createRewardsIcon();
+        createBoostIcon();
+        createAppStoreImage();
+        createGooglePlayImage();
+        
+        // Add animation to sprinkles
+        animateSprinkles();
+    });
+    
+    // Function to create the Dunkin' logo
+    function createDunkinLogo() {
+        const logoElements = document.querySelectorAll('#dunkin-logo, #footer-logo');
+        logoElements.forEach(logoElement => {
+            if (logoElement) {
+                logoElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80">
+                        <text x="10" y="50" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="${logoElement.id === 'footer-logo' ? '#ffffff' : '#ff7a16'}">DUNKIN'</text>
+                    </svg>
+                `);
+            }
         });
-        
-        // Update cart total
-        const total = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
-        cartTotalAmount.textContent = `$${total.toFixed(2)}`;
     }
     
-    // Decrease Quantity
-    function decreaseQuantity(itemId) {
-        const item = cart.find(item => item.id === itemId);
-        
-        if (item.quantity > 1) {
-            item.quantity -= 1;
-        } else {
-            removeFromCart(itemId);
-        }
-        
-        updateCart();
-    }
-    
-    // Increase Quantity
-    function increaseQuantity(itemId) {
-        const item = cart.find(item => item.id === itemId);
-        item.quantity += 1;
-        updateCart();
-    }
-    
-    // Remove from Cart
-    function removeFromCart(itemId) {
-        cart = cart.filter(item => item.id !== itemId);
-        updateCart();
-    }
-    
-    // Create Product Image
-    function createProductImage(type, color) {
-        let svgContent = '';
-        
-        switch (type) {
-            case 'coffee':
-                svgContent = `
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-                        <rect width="200" height="200" fill="#fff8ed"/>
-                        <path d="M70,70 L130,70 L120,150 L80,150 Z" fill="${color}" opacity="0.5"/>
-                        <path d="M80,70 C80,60 120,60 120,70" fill="none" stroke="${color}" stroke-width="3"/>
-                        <rect x="75" y="70" width="50" height="5" rx="2" fill="${color}"/>
-                    </svg>
-                `;
-                break;
-            case 'cold-brew':
-                svgContent = `
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-                        <rect width="200" height="200" fill="#f9f9f9"/>
-                        <path d="M70,50 L130,50 L120,150 L80,150 Z" fill="${color}" opacity="0.3"/>
-                        <rect x="90" y="50" width="20" height="100" fill="white" opacity="0.5"/>
-                        <circle cx="100" cy="70" r="5" fill="white"/>
-                        <circle cx="100" cy="90" r="5" fill="white"/>
-                        <circle cx="100" cy="110" r="5" fill="white"/>
-                        <circle cx="100" cy="130" r="5" fill="white"/>
-                    </svg>
-                `;
-                break;
-            case 'glazed-donut':
-                svgContent = `
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-                        <rect width="200" height="200" fill="#fce7ee"/>
-                        <circle cx="100" cy="100" r="60" fill="#ffcf6b" opacity="0.7"/>
-                        <circle cx="100" cy="100" r="30" fill="white"/>
-                    </svg>
-                `;
-                break;
-            case 'chocolate-donut':
-                svgContent = `
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-                        <rect width="200" height="200" fill="#f9f9f9"/>
-                        <circle cx="100" cy="100" r="60" fill="#6b4226" opacity="0.7"/>
-                        <circle cx="100" cy="100" r="30" fill="white"/>
-                    </svg>
-                `;
-                break;
-            case 'bacon-egg-cheese':
-                svgContent = `
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-                        <rect width="200" height="200" fill="#f9f9f9"/>
-                        <path d="M40,70 L160,70 L160,130 L40,130 Z" fill="#ffcf6b" opacity="0.7"/>
-                        <path d="M50,80 L150,80 L150,120 L50,120 Z" fill="#ff7a16" opacity="0.3"/>
-                        <circle cx="100" cy="100" r="20" fill="#fff8ed"/>
-                    </svg>
-                `;
-                break;
-            default:
-                svgContent = `
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-                        <rect width="200" height="200" fill="#f9f9f9"/>
-                        <circle cx="100" cy="100" r="50" fill="${color}" opacity="0.3"/>
-                        <text x="100" y="105" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">${type}</text>
-                    </svg>
-                `;
-        }
-        
-        return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgContent);
-    }
-    
-    // Event Listeners
-    orderNowBtn.addEventListener('click', openOrderModal);
-    orderBtnNav.addEventListener('click', openOrderModal);
-    closeModal.addEventListener('click', closeOrderModal);
-    
-    cartIcon.addEventListener('click', openCartSidebar);
-    closeCart.addEventListener('click', closeCartSidebar);
-    
-    overlay.addEventListener('click', function() {
-        closeOrderModal();
-        closeCartSidebar();
-    });
-    
-    // Tab switching
-    orderTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            // Remove active class from all tabs
-            orderTabs.forEach(t => t.classList.remove('active'));
-            
-            // Add active class to clicked tab
-            this.classList.add('active');
-            
-            // Load products for selected category
-            const category = this.getAttribute('data-category');
-            loadProducts(category);
-        });
-    });
-    
-    // Checkout button
-    checkoutBtn.addEventListener('click', function() {
-        if (cart.length > 0) {
-            alert('Thank you for your order! Your Dunkin\' treats will be ready soon.');
-            cart = [];
-            updateCart();
-            closeCartSidebar();
-        }
-    });
-});
-
-// Function to create the Dunkin' logo
-function createDunkinLogo() {
-    const logoElements = document.querySelectorAll('#dunkin-logo, #footer-logo');
-    logoElements.forEach(logoElement => {
-        if (logoElement) {
-            logoElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80">
-                    <text x="10" y="50" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="${logoElement.id === 'footer-logo' ? '#ffffff' : '#ff7a16'}">DUNKIN'</text>
+    // Function to create the donut image
+    function createDonutImage() {
+        const donutElement = document.getElementById('donut-image');
+        if (donutElement) {
+            donutElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                    <circle cx="150" cy="150" r="100" fill="#fce7ee" stroke="#f47ba1" stroke-width="5"/>
+                    <circle cx="150" cy="150" r="40" fill="white"/>
+                    <!-- Sprinkles -->
+                    <rect x="120" y="80" width="15" height="5" rx="2" fill="#f47ba1" transform="rotate(30 120 80)"/>
+                    <rect x="180" y="90" width="15" height="5" rx="2" fill="#6bb8ff" transform="rotate(45 180 90)"/>
+                    <rect x="190" y="150" width="15" height="5" rx="2" fill="#ffcf6b" transform="rotate(60 190 150)"/>
+                    <rect x="170" y="200" width="15" height="5" rx="2" fill="#6bffb8" transform="rotate(75 170 200)"/>
+                    <rect x="110" y="210" width="15" height="5" rx="2" fill="#ff6b6b" transform="rotate(90 110 210)"/>
+                    <rect x="80" y="170" width="15" height="5" rx="2" fill="#d46bff" transform="rotate(105 80 170)"/>
+                    <rect x="70" y="120" width="15" height="5" rx="2" fill="#6bffb8" transform="rotate(120 70 120)"/>
+                    <rect x="90" y="90" width="15" height="5" rx="2" fill="#ffcf6b" transform="rotate(135 90 90)"/>
+                    <rect x="140" y="70" width="15" height="5" rx="2" fill="#f47ba1" transform="rotate(150 140 70)"/>
+                    <rect x="160" y="220" width="15" height="5" rx="2" fill="#6bb8ff" transform="rotate(165 160 220)"/>
                 </svg>
             `);
         }
-    });
-}
-
-// Function to create the donut image
-function createDonutImage() {
-    const donutElement = document.getElementById('donut-image');
-    if (donutElement) {
-        donutElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-                <circle cx="150" cy="150" r="100" fill="#fce7ee" stroke="#f47ba1" stroke-width="5"/>
-                <circle cx="150" cy="150" r="40" fill="white"/>
-                <!-- Sprinkles -->
-                <rect x="120" y="80" width="15" height="5" rx="2" fill="#f47ba1" transform="rotate(30 120 80)"/>
-                <rect x="180" y="90" width="15" height="5" rx="2" fill="#6bb8ff" transform="rotate(45 180 90)"/>
-                <rect x="190" y="150" width="15" height="5" rx="2" fill="#ffcf6b" transform="rotate(60 190 150)"/>
-                <rect x="170" y="200" width="15" height="5" rx="2" fill="#6bffb8" transform="rotate(75 170 200)"/>
-                <rect x="110" y="210" width="15" height="5" rx="2" fill="#ff6b6b" transform="rotate(90 110 210)"/>
-                <rect x="80" y="170" width="15" height="5" rx="2" fill="#d46bff" transform="rotate(105 80 170)"/>
-                <rect x="70" y="120" width="15" height="5" rx="2" fill="#6bffb8" transform="rotate(120 70 120)"/>
-                <rect x="90" y="90" width="15" height="5" rx="2" fill="#ffcf6b" transform="rotate(135 90 90)"/>
-                <rect x="140" y="70" width="15" height="5" rx="2" fill="#f47ba1" transform="rotate(150 140 70)"/>
-                <rect x="160" y="220" width="15" height="5" rx="2" fill="#6bb8ff" transform="rotate(165 160 220)"/>
-            </svg>
-        `);
     }
-}
-
-// Function to create the beverage image
-function createBeverageImage() {
-    const beverageElement = document.getElementById('beverage-image');
-    if (beverageElement) {
-        beverageElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-                <path d="M120,50 L180,50 L190,250 L110,250 Z" fill="#fff8ed" stroke="#ff7a16" stroke-width="3"/>
-                <path d="M120,50 L180,50 L175,100 L125,100 Z" fill="#ff7a16" opacity="0.3"/>
-                <path d="M125,100 L175,100 L170,200 L130,200 Z" fill="#ff7a16" opacity="0.2"/>
-                <rect x="110" y="40" width="80" height="10" rx="5" fill="#ff7a16"/>
-                <path d="M140,40 C140,20 160,20 160,40" fill="none" stroke="#ff7a16" stroke-width="3"/>
-                <!-- Straw -->
-                <rect x="145" y="20" width="10" height="80" rx="5" fill="#f47ba1"/>
-            </svg>
-        `);
-    }
-}
-
-// Function to create the mobile icon
-function createMobileIcon() {
-    const mobileElement = document.getElementById('mobile-icon');
-    if (mobileElement) {
-        mobileElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <rect x="30" y="10" width="40" height="80" rx="5" fill="#fce7ee" stroke="#f47ba1" stroke-width="2"/>
-                <rect x="35" y="20" width="30" height="50" rx="2" fill="white"/>
-                <circle cx="50" cy="80" r="5" fill="white"/>
-                <text x="45" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f47ba1">D</text>
-                <!-- Card -->
-                <rect x="60" y="40" width="30" height="20" rx="2" fill="#fce7ee" stroke="#f47ba1" stroke-width="2" transform="rotate(10 60 40)"/>
-            </svg>
-        `);
-    }
-}
-
-// Function to create the rewards icon
-function createRewardsIcon() {
-    const rewardsElement = document.getElementById('rewards-icon');
-    if (rewardsElement) {
-        rewardsElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="40" fill="#fce7ee" stroke="#f47ba1" stroke-width="2"/>
-                <circle cx="50" cy="50" r="15" fill="white" stroke="#f47ba1" stroke-width="2"/>
-                <text x="45" y="55" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#f47ba1">D</text>
-                <!-- Donut shape -->
-                <path d="M80,30 A40,40 0 0,0 20,70" fill="none" stroke="#ff7a16" stroke-width="4" stroke-dasharray="5,5"/>
-                <!-- Croissant shape -->
-                <path d="M70,80 A40,40 0 0,0 30,20" fill="none" stroke="#ff7a16" stroke-width="4" stroke-dasharray="5,5"/>
-            </svg>
-        `);
-    }
-}
-
-// Function to create the boost icon
-function createBoostIcon() {
-    const boostElement = document.getElementById('boost-icon');
-    if (boostElement) {
-        boostElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <path d="M50,10 L60,40 L90,40 L65,60 L75,90 L50,70 L25,90 L35,60 L10,40 L40,40 Z" fill="#fce7ee" stroke="#f47ba1" stroke-width="2"/>
-                <circle cx="50" cy="50" r="10" fill="white" stroke="#f47ba1" stroke-width="2"/>
-                <text x="45" y="55" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f47ba1">D</text>
-            </svg>
-        `);
-    }
-}
-
-// Function to create App Store image
-function createAppStoreImage() {
-    const appStoreElement = document.getElementById('app-store');
-    if (appStoreElement) {
-        appStoreElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
-                <rect width="120" height="40" rx="5" fill="#333"/>
-                <text x="60" y="15" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="white">Download on the</text>
-                <text x="60" y="30" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">App Store</text>
-            </svg>
-        `);
-    }
-}
-
-// Function to create Google Play image
-function createGooglePlayImage() {
-    const googlePlayElement = document.getElementById('google-play');
-    if (googlePlayElement) {
-        googlePlayElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
-                <rect width="120" height="40" rx="5" fill="#333"/>
-                <text x="60" y="15" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="white">GET IT ON</text>
-                <text x="60" y="30" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">Google Play</text>
-            </svg>
-        `);
-    }
-}
-
-// Function to animate sprinkles
-function animateSprinkles() {
-    const sprinkles = document.querySelectorAll('.sprinkle');
     
-    sprinkles.forEach((sprinkle, index) => {
-        // Set custom rotation for each sprinkle
-        const rotation = Math.random() * 90 - 45; // Random rotation between -45 and 45 degrees
-        sprinkle.style.setProperty('--rotation', `${rotation}deg`);
+    // Function to create the beverage image
+    function createBeverageImage() {
+        const beverageElement = document.getElementById('beverage-image');
+        if (beverageElement) {
+            beverageElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                    <path d="M120,50 L180,50 L190,250 L110,250 Z" fill="#fff8ed" stroke="#ff7a16" stroke-width="3"/>
+                    <path d="M120,50 L180,50 L175,100 L125,100 Z" fill="#ff7a16" opacity="0.3"/>
+                    <path d="M125,100 L175,100 L170,200 L130,200 Z" fill="#ff7a16" opacity="0.2"/>
+                    <rect x="110" y="40" width="80" height="10" rx="5" fill="#ff7a16"/>
+                    <path d="M140,40 C140,20 160,20 160,40" fill="none" stroke="#ff7a16" stroke-width="3"/>
+                    <!-- Straw -->
+                    <rect x="145" y="20" width="10" height="80" rx="5" fill="#f47ba1"/>
+                </svg>
+            `);
+        }
+    }
+    
+    // Function to create the mobile icon
+    function createMobileIcon() {
+        const mobileElement = document.getElementById('mobile-icon');
+        if (mobileElement) {
+            mobileElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <rect x="30" y="10" width="40" height="80" rx="5" fill="#fce7ee" stroke="#f47ba1" stroke-width="2"/>
+                    <rect x="35" y="20" width="30" height="50" rx="2" fill="white"/>
+                    <circle cx="50" cy="80" r="5" fill="white"/>
+                    <text x="45" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f47ba1">D</text>
+                    <!-- Card -->
+                    <rect x="60" y="40" width="30" height="20" rx="2" fill="#fce7ee" stroke="#f47ba1" stroke-width="2" transform="rotate(10 60 40)"/>
+                </svg>
+            `);
+        }
+    }
+    
+    // Function to create the rewards icon
+    function createRewardsIcon() {
+        const rewardsElement = document.getElementById('rewards-icon');
+        if (rewardsElement) {
+            rewardsElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" fill="#fce7ee" stroke="#f47ba1" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="15" fill="white" stroke="#f47ba1" stroke-width="2"/>
+                    <text x="45" y="55" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#f47ba1">D</text>
+                    <!-- Donut shape -->
+                    <path d="M80,30 A40,40 0 0,0 20,70" fill="none" stroke="#ff7a16" stroke-width="4" stroke-dasharray="5,5"/>
+                    <!-- Croissant shape -->
+                    <path d="M70,80 A40,40 0 0,0 30,20" fill="none" stroke="#ff7a16" stroke-width="4" stroke-dasharray="5,5"/>
+                </svg>
+            `);
+        }
+    }
+    
+    // Function to create the boost icon
+    function createBoostIcon() {
+        const boostElement = document.getElementById('boost-icon');
+        if (boostElement) {
+            boostElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <path d="M50,10 L60,40 L90,40 L65,60 L75,90 L50,70 L25,90 L35,60 L10,40 L40,40 Z" fill="#fce7ee" stroke="#f47ba1" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="10" fill="white" stroke="#f47ba1" stroke-width="2"/>
+                    <text x="45" y="55" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f47ba1">D</text>
+                </svg>
+            `);
+        }
+    }
+    
+    // Function to create App Store image
+    function createAppStoreImage() {
+        const appStoreElement = document.getElementById('app-store');
+        if (appStoreElement) {
+            appStoreElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
+                    <rect width="120" height="40" rx="5" fill="#333"/>
+                    <text x="60" y="15" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="white">Download on the</text>
+                    <text x="60" y="30" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">App Store</text>
+                </svg>
+            `);
+        }
+    }
+    
+    // Function to create Google Play image
+    function createGooglePlayImage() {
+        const googlePlayElement = document.getElementById('google-play');
+        if (googlePlayElement) {
+            googlePlayElement.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
+                    <rect width="120" height="40" rx="5" fill="#333"/>
+                    <text x="60" y="15" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="white">GET IT ON</text>
+                    <text x="60" y="30" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">Google Play</text>
+                </svg>
+            `);
+        }
+    }
+    
+    // Function to animate sprinkles
+    function animateSprinkles() {
+        const sprinkles = document.querySelectorAll('.sprinkle');
         
-        // Set random position
-        const top = 20 + Math.random() * 60; // Random top position between 20% and 80%
-        const left = 20 + Math.random() * 60; // Random left position between 20% and 80%
-        
-        sprinkle.style.top = `${top}%`;
-        sprinkle.style.left = `${left}%`;
-    });
-}
+        sprinkles.forEach((sprinkle, index) => {
+            // Set custom rotation for each sprinkle
+            const rotation = Math.random() * 90 - 45; // Random rotation between -45 and 45 degrees
+            sprinkle.style.setProperty('--rotation', `${rotation}deg`);
+            
+            // Set random position
+            const top = 20 + Math.random() * 60; // Random top position between 20% and 80%
+            const left = 20 + Math.random() * 60; // Random left position between 20% and 80%
+            
+            sprinkle.style.top = `${top}%`;
+            sprinkle.style.left = `${left}%`;
+        });
+    }
     </script>
 </body>
 </html>
